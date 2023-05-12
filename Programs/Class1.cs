@@ -1,4 +1,4 @@
-﻿namespace Devices
+﻿namespace Programs
 {
 	public class Class1
 	{

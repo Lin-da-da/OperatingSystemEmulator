@@ -1,6 +1,6 @@
-﻿namespace Tester
+﻿namespace Launcher
 {
-	internal class Program
+	internal class Launcher
 	{
 		static void Main(string[] args)
 		{
