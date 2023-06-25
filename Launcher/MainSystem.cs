@@ -1,6 +1,6 @@
 ﻿namespace Launcher
 {
-	internal class Launcher
+	internal class MainSystem
 	{
 		static void Main(string[] args)
 		{

@@ -10,9 +10,16 @@ namespace Devices
 	/// 代表设备的抽象类
 	/// </summary>
 	public abstract class Device
-	{
-		public abstract string Name { get; set; }
-		public abstract bool IsEnabled { get; set; }
-		public abstract bool IsOnline { get; set; }
+	{ 
+		public string? Name { get; set; }
+		public int Id { get; set; }
+		/// <summary>
+		/// 是否启用
+		/// </summary>
+		public bool IsEnabled { get; set; }
+		/// <summary>
+		/// 是否就绪
+		/// </summary>
+		public bool IsOnlined { get; set; }
 	}
 }

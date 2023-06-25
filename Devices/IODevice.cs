@@ -9,7 +9,7 @@ namespace Devices
 	/// <summary>
 	/// 模拟IO设备
 	/// </summary>
-	public abstract class IODevice
+	public abstract class IODevice : Device
 	{
 		public bool EnableInput;
 		public bool EnableOutput;

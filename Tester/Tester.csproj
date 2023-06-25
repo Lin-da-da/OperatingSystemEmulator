@@ -10,7 +10,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Devices\Devices.csproj" />
     <ProjectReference Include="..\Kernel\Kernel.csproj" />
-    <ProjectReference Include="..\Programs\Programs.csproj" />
     <ProjectReference Include="..\Shell\Shell.csproj" />
   </ItemGroup>
 

@@ -7,27 +7,20 @@ MLang只有脚本解析器, 没有编译器和汇编器, MLang代码可以直接提交给本系统的模拟处理
 
 #### 变量
 
-MLang仅支持四种变量类型: `int`, `double`, `char`, `string`.
+MLang是弱类型语言, 
 
-变量在使用前需要声明.
-
-声明方法: `[type] <name> = [value]`: 声明类型为`type`的变量name并将值value赋予变量name. 其中初始值为可选选项.
-
-注意, 所有变量在声明时若未设置初始值, 将会设置为默认值, 以下是四种变量的默认值
-
-- `int` : 0
-- `double` : 0.0
-- `char` : '\0', 即空字符
-- `string` : "", 即长度为零的空字符串
+MLang仅支持四种变量类型: `int`, `double`, `string`.
 
 #### 语句
 
 ##### 操作语句
 
-- `<arg> = [value]` : 将值`value`赋值给`reg`.
-- `<arg1> = <arg2>`: 将`arg2`的值赋值给`arg1`.
-- `<arg> ++`: 将`arg`的值加一.
-- `<arg> --`: 将`arg`的值减一.
+- `<arg>=[value]` : 将值`value`赋值给`reg`.
+- `<arg1>=<arg2>`: 将`arg2`的值赋值给`arg1`.
+- `<arg>++`: 将`arg`的值加一.
+- `<arg>--`: 将`arg`的值减一.
+
+注意, 操作符和操作数之间不可有空格.
 
 #### 系统指令语句
 - `/time` 获取当前系统时间刻.(系统时间刻定义见系统文档)
@@ -40,9 +33,9 @@ MLang仅支持四种变量类型: `int`, `double`, `char`, `string`.
 ### 错误
 由于本语言特性, MLang没有运行时错误, 只有解析错误.
 
-当解释器遇到解析错误时, 会通过系统标准输出, 输出错误信息.
+当解释器遇到解析错误时, 会中止解析, 并通过系统的标准输出, 输出错误信息.
 
 所有错误类型如下:
-- `Unknowed System Command`
-- `Unknowed Device`
-- `Variable Type Error`
+- `Unknowed System Command ERROR`
+- `Unknowed Device ERROR`
+- `Invalid Scripts ERROR`

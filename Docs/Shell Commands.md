@@ -14,29 +14,29 @@ Msh具有以下功能:
 
 - `msh [参数...]` : Msh控制指令
 	> msh参数  
-		`--new` :  
-		`--exit` :  
-		`--status` :  
+		`--exit` :  退出shell  
+		`--status` :  查看shell当前状态  
+		`--version` :  查看shell版本   
 
 ## 系统命令接口
 
 ### 系统
 
-- `reboot`
-- `poweroff`
-- `shutdown [参数...]`
+- `reboot` : 重启系统
+- `poweroff` : 自动关闭系统，会依次关闭相关进程
+- `shutdown [参数...]` : 强制关闭系统
 	> shutdown参数  
 		`-f` :  强制关闭系统.  
 		`[int value]` : 在`int value`个系统时间刻后关闭系统.  
-- `status`
+- `status` : 查看系统状态
 
 ### 文件
 
-- `create`
-- `mkdir`
-- `rm`
-- `mv`
-- `type <file>` : 
+- `create` : 创建文件
+- `mkdir` : 创建目录
+- `rm` : 删除文件或目录
+- `mv` : 移动文件或目录
+- `type <file>` ： 查看文件类型
 - `ls` : 列出当前所在目录下的文件和目录
 
 ### 设备
@@ -55,5 +55,3 @@ Msh具有以下功能:
 	> 参数列表   
 		`-b` : 后台运行  
 		`-n` : 关闭输出  
-
-### 其他
